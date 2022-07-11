@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Card</title>
+    <style>
+        /* Montserrat */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+        /* Fraunces */
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;600&display=swap');
+        
+        body { background-color: hsl(30, 38%, 92%); }
+        .big-box { 
+            position: absolute;
+            background-color: red; 
+            width: 700px; 
+            height: 500px;
+            margin: 0 auto;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 15px;
+        }
+        #image-box {
+            position: relative;
+            background-color: yellow;
+            width: 50%;
+            height:100%;
+            float: left;
+            border-radius: 15px 0 0 15px;
+            overflow: hidden;
+        }
+        img {position: relative; width:100%; height: 100%;}
+        #right-box {
+            position: relative;
+            background-color: hsl(0, 0%, 100%);
+            float: right;
+            width:50%;
+            height: 100%;
+            border-radius: 0 15px 15px 0;
+        }
+        /* #right-box > div { margin: 30px;} */
+        #price {height: 9%; margin: 15px 30px 10px 30px;}
+        #h-price {float: left; width:50%; background-color: white; font-family:'Fraunces', serif; margin-right:5px; line-height:50%; color: hsl(158, 36%, 37%);}
+        #sell-price {position: relative; float: left; width: 30%; font-family: 'Montserrat', sans-serif; top: 30%; color: hsl(228, 12%, 48%); text-decoration: line-through;}
+        #button {padding: 4%;}
+        button:hover { background-color:#002C00;}
+        button {
+            display: block; 
+            border: 0; 
+            width:90%; 
+            padding: 7%; 
+            border-radius: 10px; 
+            margin-left:15px; 
+            background-color: hsl(158, 36%, 37%); 
+            color: hsl(0, 0%, 100%);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 17px;
+            cursor: pointer;
+        }
+        #cart {margin-left: 10px;}
+
+        /* 폰트 css */
+        #name { font-family: 'Montserrat', sans-serif; font-size: 14px; margin: 30px; color: hsl(228, 12%, 48%);}
+        #description {font-family: 'Montserrat', serif; font-size: 14px; line-height: 23px; margin: 30px 30px 10px 30px; color: hsl(228, 12%, 48%);}
+        #product {font-family:'Fraunces', serif; margin: 30px; color:hsl(212, 21%, 14%);}
+    </style>
+</head>
+<body>
+    <div class="big-box">
+        <div id="image-box"><img src="preview-card/images/image-product-desktop.jpg"></div>
+        <div id="right-box">
+            <div><p id="name">P E R F U M E</p></div>
+            <div id="product"><h1>Gabrielle<br> Essence Eau De Parfum</h1></div>
+            <div id="description"><p> A floral, solar and voluptuous interpretation composed by Olivier<br> Polge, Perfumer-Creator for the<br> House of CHANEL.</p></div>
+            <div id="price">
+                <div id="h-price"><h1>$149.99</h1></div>
+                <div id="sell-price">$169.99</div>
+            </div>
+            <div id="button"><button>
+                <svg id=cart_img" width="16" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF"/></svg>
+            <span id="cart">Add to Cart</span></button></div>
+        </div>
+    </div>
+</body>
+</html>
